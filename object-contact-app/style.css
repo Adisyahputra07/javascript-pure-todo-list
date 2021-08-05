@@ -131,17 +131,49 @@ table {
 /* START CSS */ /* START CSS */ /* START CSS */ /* START CSS */
 /* START CSS */ /* START CSS */ /* START CSS */ /* START CSS */
 body {
-  background-image: url(./aset-object/bg1.jpg);
+  /* background-image: url(./aset-object/bg1.jpg); */
   background-size: 100%;
 }
+
+.navbar {
+  width: 100%;
+  height: 65px;
+  background-color: rgb(26, 26, 43);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 1px 3px grey;
+}
+
+.nav-one {
+  padding-top: 20px;
+  margin-left: 40px;
+  font-size: 23px;
+  background-color: rgb(26, 26, 43);
+}
+
+.nav-one > a {
+  text-decoration: none;
+}
+
+.nav-two {
+  padding-top: 25px;
+  margin-right: 40px;
+  background-color: rgb(26, 26, 43);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.nav-two > a {
+  margin-right: 15px;
+  margin-left: 15px;
+  text-decoration: none;
+}
 .container-two {
-  background-color: #fff;
-  border-bottom-left-radius: 90px;
-  border-bottom-right-radius: 90px;
+  background-color: rgb(15, 15, 39);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
   height: 700px;
   width: 95%;
   display: flex;
-  margin: 70px auto;
+  margin: 40px auto;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   box-shadow: 0px 1px 3px grey;
 }
@@ -151,7 +183,7 @@ body {
 }
 
 .two {
-  border-left: 3px solid #00517c;
+  border-left: 1px solid grey;
   flex: 1.7;
   color: #0f0c33;
 }
@@ -181,7 +213,6 @@ body {
 .card {
   margin-left: 10px;
   margin-bottom: 2em;
-  border: 1px solid #eee;
   border-radius: 8px;
   padding: 10px;
   width: 160px;
@@ -189,6 +220,7 @@ body {
   box-shadow: 0px 2px 2px #ccc;
   display: inline-block;
   word-wrap: break-word;
+  background-color: rgb(141, 144, 151);
 }
 
 .names {
@@ -236,7 +268,7 @@ p {
 .header-input {
   width: 100%;
   height: 40px;
-  background-color: #69c5d4;
+  background-color: #ffd255;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 15px;
@@ -258,6 +290,7 @@ p {
 .input > form > label {
   font-size: 20px;
   font-weight: bold;
+  color: #ccc;
 }
 
 .input > form > input {
@@ -278,7 +311,7 @@ p {
   margin-bottom: 80px;
   border-radius: 10px;
   font-size: 15px;
-  background-color: #ffd255;
+  background-color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #0f0c33;
   font-weight: bold;
@@ -293,6 +326,7 @@ p {
   margin: 30px auto;
   text-align: center;
   box-shadow: 0px 0px 3px grey;
+  background-color: rgb(15, 15, 39);
 }
 
 .navbar-edit {
@@ -301,8 +335,8 @@ p {
   font-size: 25px;
   width: 100%;
   height: 67px;
-  background-color: #69c5d4;
-  line-height: 50px;
+  background-color: #ff4848;
+  line-height: 67px;
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -315,6 +349,7 @@ p {
 }
 
 .from-edit label {
+  color: #ffd255;
   font-size: 17px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
@@ -338,6 +373,7 @@ p {
 
 .footer > span {
   font-size: 14px;
+  color: #ffd255;
 }
 
 /* Responsive */ /* Responsive */ /* Responsive */

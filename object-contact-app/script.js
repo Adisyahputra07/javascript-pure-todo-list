@@ -9,16 +9,16 @@ let inpuEditAddress = document.querySelector("#editAddress");
 
 // Add Contact// Add Contact//
 // amati flownya adi!!!
-function loopContact() {
+function loopContact(data) {
   let html = "";
 
-  for (let datas of dataContact) {
+  for (let datas of data) {
     html += `<div class="card" id="${datas.id}">
     <p class="names"><span>Name</span> : ${datas.name}</p>
     <p class="address"><span>Address</span> : ${datas.address}</p>
     <div class="button-contact">
       <button class="delete-contact" onclick="deleteContact(${datas.id})">delete</button>
-      <button class="edit-contact" onclick="editContact(${datas.id})">edit</button>
+      <a href="#editForm"><button class="edit-contact" onclick="editContact(${datas.id})">edit</button></a>
     </div>
   </div>`;
   }
@@ -45,19 +45,24 @@ from.addEventListener("submit", function (e) {
   inputName.value = "";
   inputAddress.value = "";
   dataContact.push(data);
-  loopContact();
+  loopContact(dataContact);
   console.log(dataContact);
 });
 
+let dataDelet = {};
 // Add Contact // Add Contact//
 function deleteContact(id) {
-  dataContact.map((data) => {
-    if (data.id == id) {
-      dataContact.splice(data, 1);
-      console.log(dataContact);
-    }
+  dataDelet = dataContact.filter((item) => {
+    return item.id != id;
   });
-  loopContact();
+
+  console.log(dataDelet);
+  loopContact(dataDelet);
+
+  // dataContact.splice(
+  //   dataContact.findIndex((data) => data.id === id),
+  //   1
+  // );
 }
 
 // Edit Contact// Edit Contact//
@@ -90,7 +95,7 @@ fromEdit.addEventListener("submit", (e) => {
       data.address = inpuEditAddress.value;
       // dataContact.splice(data.id);
       console.log(dataContact);
-      loopContact();
+      loopContact(dataContact);
     }
   });
   if (inputEditName.value == "" || inpuEditAddress.value == "") {

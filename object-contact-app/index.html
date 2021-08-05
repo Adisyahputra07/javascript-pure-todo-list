@@ -9,11 +9,19 @@
   </head>
   <body>
     <div class="container">
-      <div class="navbar"></div>
+      <div class="navbar">
+        <div class="nav-one">
+          <a href="#">Home</a>
+        </div>
+        <div class="nav-two">
+          <a href="#header-contact">Contact</a>
+          <a href="#headerInput">Add Contact</a>
+        </div>
+      </div>
       <!-- content content -->
       <div class="container-two">
         <main class="one">
-          <div class="header-contact">
+          <div class="header-contact" id="header-contact">
             <h1>Contact</h1>
           </div>
           <div class="contact"></div>
@@ -46,7 +54,7 @@
         </div>
         <div class="from-edit">
           <form action="#/" id="editForm">
-            <label for="editName"></label><br />
+            <label for="editName">Name</label><br />
             <input type="text" name="editName" id="editName" /><br />
             <label for="editAddress">Address</label><br />
             <input type="text" name="editAddress" id="editAddress" /><br />
